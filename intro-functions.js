@@ -12,7 +12,15 @@ var myObject = {
  */
 
 function max(a, b){
-    // YOUR CODE HERE
+    if(a < b){
+      return(b);
+    } else if (a > b){
+      return(a);
+    } else if (a !== b){
+      return(b);
+    } else{
+      return("aaa","bbb");
+    }
 }
 
 console.assert(max(1,3) === 3);
@@ -73,11 +81,11 @@ function rovarspraket(text){
     // YOUR CODE HERE
 }
 
-console.assert(rovarspraket("a") === "a")
-console.assert(rovarspraket("b") === "bob")
-console.assert(rovarspraket("cat") === "cocatot")
-console.assert(rovarspraket("javascript") === "jojavovasoscocroripoptot")
-console.assert(rovarspraket(0) === "0")
+console.assert(rovarspraket("a") === "a");
+console.assert(rovarspraket("b") === "bob");
+console.assert(rovarspraket("cat") === "cocatot");
+console.assert(rovarspraket("javascript") === "jojavovasoscocroripoptot");
+console.assert(rovarspraket(0) === "0");
 
 /**
  * Part 4
@@ -92,8 +100,8 @@ function reverse(str){
     // YOUR CODE HERE
 }
 
-console.assert(reverse("books") === "skoob")
-console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew")
+console.assert(reverse("books") === "skoob");
+console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew");
 
 /**
  * Part 5
@@ -108,5 +116,5 @@ function findLongestWord(sentence){
     // YOUR CODE HERE
 }
 
-console.assert(findLongestWord("book dogs") === "book")
-console.assert(findLongestWord("don't mess with Texas") === "Texas")
+console.assert(findLongestWord("book dogs") === "book");
+console.assert(findLongestWord("don't mess with Texas") === "Texas");
