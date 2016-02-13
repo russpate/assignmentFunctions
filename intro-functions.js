@@ -93,29 +93,20 @@ console.assert(isVowel("E") === true);
  */
 
 function rovarspraket(text){
-  //create a variable to house the product of the split and reconfigured text
-  var result;
-    //this assigns the array of the split parameter to the previously declared variable
-    result = text.split("");
-    //the for loop starts at the beginning of text the delimiter reads text until the length has expired and then the incrementer will duplicate by a unit of 1
-    for (i = 0; i < text.length; i++){
-      console.log([result + ":)"]);
+//create a variable to split text up into an array, you have to include
+  var rovarMachine = String(text).split("");
+  var result = "";
+
+    for (var i = 0; i < rovarMachine.length; i++){
+      if (rovarMachine[i] !== "a" && rovarMachine[i] !== "e" && rovarMachine[i] !== "i" && rovarMachine[i] !== "o" && rovarMachine[i] !== "u" && isNaN(rovarMachine[i])){
+        result += rovarMachine[i] + "o" + rovarMachine[i];
+      } else {
+        result += rovarMachine[i];
+      }
     }
+    return result;
 }
 
-// function rovarspraket(text){
-//     var finalString = "";
-//
-//     for (i = 0; i < text.length; i++){
-//       if (isVowel(text[i])) {
-//         finalString = finalString + (text[i]);
-//       } else {
-//         finalString = finalString + (text[i] + "o" + text[i]);
-//
-//       }
-//     }
-//     return finalString;
-// }
 
 console.assert(rovarspraket("a") === "a");
 console.assert(rovarspraket("b") === "bob");
@@ -133,7 +124,7 @@ console.assert(rovarspraket(0) === "0");
  */
 
 function reverse(str){
-    // YOUR CODE HERE
+    // String(str).split().reverse().join();
 }
 
 console.assert(reverse("books") === "skoob");
