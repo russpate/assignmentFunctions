@@ -66,7 +66,12 @@ console.assert(isNaN(maxOfThree("aaa","bbb","ccc")));
  */
 
 function isVowel(char){
-    // YOUR CODE HERE
+  var vowel = char.toString().toLowerCase();
+  if (vowel === "a" || vowel === "e" || vowel === "i" || vowel === "o" || vowel === "u"){
+    return(true);
+  } else{
+  return(false);
+  }
 }
 
 console.assert(isVowel(0) === false);
@@ -78,7 +83,7 @@ console.assert(isVowel("E") === true);
 /**
  * PART 3
  *
- * Write a function rovarspraket() that will translate
+/ * Write a function rovarspraket() that will translate
  * a text into a "rövarspråket". That is, double every
  * consonant and place an occurrence of "o" in between.
  *
@@ -88,8 +93,29 @@ console.assert(isVowel("E") === true);
  */
 
 function rovarspraket(text){
-    // YOUR CODE HERE
+  //create a variable to house the product of the split and reconfigured text
+  var result;
+    //this assigns the array of the split parameter to the previously declared variable
+    result = text.split("");
+    //the for loop starts at the beginning of text the delimiter reads text until the length has expired and then the incrementer will duplicate by a unit of 1
+    for (i = 0; i < text.length; i++){
+      console.log([result + ":)"]);
+    }
 }
+
+// function rovarspraket(text){
+//     var finalString = "";
+//
+//     for (i = 0; i < text.length; i++){
+//       if (isVowel(text[i])) {
+//         finalString = finalString + (text[i]);
+//       } else {
+//         finalString = finalString + (text[i] + "o" + text[i]);
+//
+//       }
+//     }
+//     return finalString;
+// }
 
 console.assert(rovarspraket("a") === "a");
 console.assert(rovarspraket("b") === "bob");
