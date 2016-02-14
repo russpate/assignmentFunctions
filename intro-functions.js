@@ -98,10 +98,16 @@ function rovarspraket(text){
   var result = "";
 
     for (var i = 0; i < rovarMachine.length; i++){
-      if (rovarMachine[i] !== "a" && rovarMachine[i] !== "e" && rovarMachine[i] !== "i" && rovarMachine[i] !== "o" && rovarMachine[i] !== "u" && isNaN(rovarMachine[i])){
-        result += rovarMachine[i] + "o" + rovarMachine[i];
+      var rM = rovarMachine[i];
+      if (rM !== "a" &&
+      rM !== "e" &&
+      rM !== "i" &&
+      rM !== "o" &&
+      rM !== "u" &&
+      isNaN(rM)){
+        result += rM + "o" + rM;
       } else {
-        result += rovarMachine[i];
+        result += rM;
       }
     }
     return result;
@@ -124,7 +130,9 @@ console.assert(rovarspraket(0) === "0");
  */
 
 function reverse(str){
-    // String(str).split().reverse().join();
+    var axe = str.split("");
+    var mirror = axe.reverse("");
+    return (mirror.join(""));
 }
 
 console.assert(reverse("books") === "skoob");
@@ -140,8 +148,23 @@ console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew
  */
 
 function findLongestWord(sentence){
-    // YOUR CODE HERE
+
+  var longestWord = "";
+  var word = sentence.split(" ");
+
+  console.log(word);
 }
 
 console.assert(findLongestWord("book dogs") === "book");
 console.assert(findLongestWord("don't mess with Texas") === "Texas");
+
+
+
+
+
+
+
+
+
+
+// extra space
