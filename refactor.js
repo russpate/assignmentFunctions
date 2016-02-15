@@ -173,8 +173,6 @@ var spanishColor = {
   negro: "#000000",
 };
 
-
-
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -216,6 +214,12 @@ var callTenTimes = function(callback) {
 // Put your answer below -------------------------
 
 
+var callNTimes = function(callback) {
+  var range = _.range(n);
+  _.each(range, callback);
+};
+
+
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -243,6 +247,10 @@ var decreaseScore = function() {
 
 // Put your answer below -------------------------
 
+var score = function(){
+  var increase = (score++);
+  var decrease = (score--);
+};
 
 // -----------------------------------------------
 
@@ -262,6 +270,13 @@ var addNumbers = function(numberA, numberB) {
 var twoPlusTwo = addNumbers(2,2);
 
 // Put your answer below -------------------------
+
+var addNumbers = function(numberA, numberB) {
+  console.log(numberA + numberB);
+  return(numberA + numberB);
+};
+
+var twoPlusTwo = addNumbers(2,2);
 
 
 // -----------------------------------------------
@@ -288,6 +303,18 @@ var accelerate = function(amount) {
 };
 
 // Put your answer below -------------------------
+
+
+//Answer:
+//When the parameter is not represented by a value it will return NaN because
+//undefined is not a number... I think.
+
+var speed = 0;
+// found a formula for setting a default parameter with an if statement here http://stackoverflow.com/a/6486357
+var accelerate = function(amount) {
+  if (typeof(amount) === isNaN()) amount = 1;
+  speed += amount;
+};
 
 
 // -----------------------------------------------

@@ -148,7 +148,7 @@ console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew
 
 function findLongestWord(sentence){
 
-  var words = sentence.split(" ");
+  var words = sentence.replace("'","").split(" ");
   // var counter = Math.max(words.length);
 
   var longestWord = '';
@@ -161,7 +161,7 @@ function findLongestWord(sentence){
     console.log(words[i]);
   }
 
-  return (longestWord);
+  return longestWord;
 }
 
 console.assert(findLongestWord("book dogs") === "book");
