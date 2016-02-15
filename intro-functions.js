@@ -113,7 +113,6 @@ function rovarspraket(text){
     return result;
 }
 
-
 console.assert(rovarspraket("a") === "a");
 console.assert(rovarspraket("b") === "bob");
 console.assert(rovarspraket("cat") === "cocatot");

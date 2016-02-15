@@ -95,7 +95,8 @@ console.log("The letter is", letter);
 // and even though it is first being declared as 'x' at the top, in the last instance it is being redefined as 'z' and
 // this takes precedence over the first instance. Whereas, the second instance of letter is operating
 // inside the function as a local variable and the memory of the string exists within that function. The variable letter = 'y'
-// is logging after the variable letter = 'z' because the computer is running the funciton last.
+// is logging after the variable letter = 'z' because the computer is running the function last. The function is being run
+// last because of the setTimeout method which runs the function after the specified amount of time.
 //
 // At least I think so.
 
@@ -120,6 +121,12 @@ var reverseStr = function(str) {
 };
 
 // Put your answer below -------------------------
+
+var reverseStr = function(str) {
+  var arr = str.split(""); arr = arr.reverse(); str = arr.join(""); return str;
+};
+
+console.assert(reverseStr("books") === "skoob");
 
 
 // -----------------------------------------------
@@ -155,6 +162,18 @@ var spanishColor = function(colorName) {
 
 // Put your answer below -------------------------
 
+var spanishColor = {
+  colorName: function(color){
+    return(color);
+  },
+  rojo: "#ff0000",
+  blanco: "#ffffff",
+  azul: "#0000ff",
+  verde: "#00ff00",
+  negro: "#000000",
+};
+
+
 
 // -----------------------------------------------
 
@@ -172,6 +191,8 @@ var foo = "bar";
 
 // Put your answer below -------------------------
 
+var foo;
+foo = "bar";
 
 // -----------------------------------------------
 
