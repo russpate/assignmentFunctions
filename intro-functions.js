@@ -149,10 +149,20 @@ console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew
 
 function findLongestWord(sentence){
 
-  var longestWord = "";
-  var word = sentence.split(" ");
+  var words = sentence.split(" ");
+  // var counter = Math.max(words.length);
 
-  console.log(word);
+  var longestWord = '';
+
+  for (var i = 0; i < words.length; i++) {
+
+    if(words[i].length > longestWord.length){
+      words[i] = longestWord;
+    }
+    console.log(words[i]);
+  }
+
+  return (longestWord);
 }
 
 console.assert(findLongestWord("book dogs") === "book");

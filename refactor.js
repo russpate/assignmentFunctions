@@ -29,7 +29,10 @@ function doSomethingCool() {
 
 // Put your answer below -------------------------
 
-
+// found a format for writing anonymous functions here: http://esbueno.noahstokes.com/post/77292606977/self-executing-anonymous-functions-or-how-to-write
+var doSomethingCool = function () {
+  console.log("Something Cool!");
+};
 
 // -----------------------------------------------
 
@@ -50,7 +53,11 @@ setTimeout(sayHi, 2000);
 
 // Put your answer below -------------------------
 
+var sayHi = function () {
+  alert("Hello, World!");
+};
 
+setTimeout(sayHi, 2000);
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -79,6 +86,18 @@ letter = "z";
 console.log("The letter is", letter);
 
 // Put your answer below -------------------------
+
+//[c]: The console is logging z then y.
+//
+// My Explanation:
+//
+// The computer reads from top to bottom and the variable letter is global (in that it exists outside of the function)
+// and even though it is first being declared as 'x' at the top, in the last instance it is being redefined as 'z' and
+// this takes precedence over the first instance. Whereas, the second instance of letter is operating
+// inside the function as a local variable and the memory of the string exists within that function. The variable letter = 'y'
+// is logging after the variable letter = 'z' because the computer is running the funciton last.
+//
+// At least I think so.
 
 
 // -----------------------------------------------
